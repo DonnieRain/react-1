@@ -61,7 +61,7 @@ export default class App extends Component {
 
     addTodo = (e) => {
         const inputs = document.querySelector('.edit')
-        let newObj = {id:this.state.todoListItem.length + 1, title: inputs.value, isDone: false }
+        let newObj = {id:Date.now(), title: inputs.value, isDone: false }
         this.state.todoListItem.push(newObj)
         this.setState(({
             todoListItem: this.state.todoListItem
